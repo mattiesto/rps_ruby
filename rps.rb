@@ -1,25 +1,15 @@
-# # Rock, Paper, Scissors
-#
-# what_user_enters = "fdsfad"
-# while what_user_enters != "quit"
-#   puts "inside the loop"
-#   if what_user_enters == "correct"
-#     puts "correct"
-#   else
-#     puts "that wasn't right"
-#   end
-#   what_user_enters = "quit"
-# end
-#
-
-
 
 
 puts "Welcome to Rock, Paper, Scissors!"
 
-puts "Your move: rock, paper, or scissors?"
+while true
+  puts "Your move: rock, paper, or scissors?"
 
 user_choice = gets.chomp.downcase
+
+if user_choice == "quit"
+  break
+end
 
 if user_choice != "rock" && user_choice != "paper" && user_choice != "scissors"
   puts "That doesn't seem to be a valid move."
@@ -37,4 +27,5 @@ else
   elsif computer_choice == "rock" && user_choice == "scissors" || computer_choice == "paper" && user_choice == "rock" || computer_choice == "scissors" && user_choice == "paper"
     puts "You lose!"
   end
+end
 end
